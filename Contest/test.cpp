@@ -1,10 +1,12 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
 int main()
 {
- char i,c[10];
- for(i='a';i<='z';i++)
- cout<<i;
- return 0;
+
+    int i;
+    char s[1000];
+    scanf("%[a-zA-Z]",s);
+    printf("%s",s);
+
+    return 0;
 }

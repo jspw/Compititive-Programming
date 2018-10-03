@@ -3,13 +3,11 @@
 int main()
 
 {
-    int a,n,i,sum;
-    scanf("%d",&n);
-    sum = 0;
-    for (i=1;i<=n;i++) {
-        scanf("%d",&a);
-        sum= sum+a;
+    int a,b,i,sum;
+    while(scanf("%d%d",&a,&b)!= EOF)
+    {
+        sum=a+b;
+        printf("SUM = %d\n",sum);
     }
-    printf("SUM = %d",sum);
     return 0;
 }

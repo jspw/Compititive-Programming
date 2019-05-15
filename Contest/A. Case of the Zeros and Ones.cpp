@@ -2,48 +2,23 @@
 using namespace std;
 int main()
 {
-    int j,n,i,y,p;
-    char a;
-    vector <char> l;
-    vector <char> :: iterator it;
+    int i,n,p=0,q=0;
     cin>>n;
-    for(i=0; i<n; i++)
+    string str;
+    cin>>str;
+    for(i=0;i<str.size();i++)
     {
-        // cout<<"ENter a : ";
-        cin>>a;
-        l.push_back(a);
-    }
-    for(it=l.begin(); it!=l.end(); it++)
-        cout<<*it<<" ";
-    cout<<endl;
-    y=l.size();
-    for(j=i;p!=0; j++)
-        p=0;
-    {
-        for(i=0; i<y; i++)
-        {
-            if(l[i]=='0' && l[i+1]=='1')
-            {
-                cout<<"i = "<<i<<endl;
-                l.erase(l.begin()+i);
-                l.erase(l.begin()+i+1);
-                i++;
-                p++;
-                cout<<"p = "<<p<<" i = "<<i<<endl;
-
-            }
-            else if(l[i]=='1' && l[i+1]=='0')
-            {
-                cout<<"i = "<<i<<endl;
-                l.erase(l.begin()+i);
-                l.erase(l.begin()+i+1);
-                i++;
-                p++;
-                cout<<"p = "<<p<<" i = "<<i<<endl;
-            }
-        }
+        if(str[i]=='0')
+            p++;
+        else q++;
     }
 
-    cout<<l.size()<<endl;
+    if(p==n )
+        cout<<n<<endl;
+    else if(q==n)
+        cout<<n<<endl;
+    else {
+        cout<<n-2*min(p,q)<<endl;
+    }
     return 0;
 }

@@ -2,21 +2,54 @@
 using namespace std;
 int main()
 {
-    int i,j=0;
-    string  a;
-    cin>>a;
-    if(strlen(a)>=7)
+    int t;
+    string str;
+    map<string,int>mp;
+    map<string,int>::iterator it;
+
+    cin>>t;
+    for(int i=0; i<t; i++)
     {
-        for(i=0;a[i]!='\0';i++)
+        cin>>str;
+        bool check =false;
+        if(!mp.empty())
         {
-            if(a[i]==a[i+1] && a[i]==a[i+2] && a[i]==a[i+3] && a[i]==a[i+4] && a[i]==a[i+5] && a[i]==a[i+6])
-                j++;
+            for(it=mp.begin(); it!=mp.end(); it++)
+            {
+                if(it->first==str)
+                {
+                    check=true;
+                    it->second++;
+                }
+
+            }
+            if(!check)
+                mp.insert(pair<string,int>(str,1));
+
         }
-        if(j>=1)
-            cout<<"YES"<<endl;
-        else cout<<"NO"<<endl;
+
+        else
+            mp.insert(pair<string,int>(str,1));
+
     }
-    else cout<<"NO"<<endl;
+    int mx=-1;
+
+    for(it=mp.begin(); it!=mp.end(); it++)
+    {
+        if(it->second>mx)
+        {
+            mx=it->second;
+        }
+    }
+
+    for(it=mp.begin(); it!=mp.end(); it++){
+        if(it->second==mx)
+        {
+            cout<<it->first<<endl;
+            break;
+        }
+    }
+
 
 
     return 0;

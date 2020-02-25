@@ -3,7 +3,8 @@
         "*.txt": "plaintext",
         "iostream": "cpp",
         "ostream": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "*.tcc": "cpp"
     },
     "editor.wordWrap": "on",
     "MicroPython.executeButton": [

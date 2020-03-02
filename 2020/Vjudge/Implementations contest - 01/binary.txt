@@ -1,42 +1,51 @@
-0000000000004058 B __bss_start
-00000000000042b8 b completed.7447
+00000000000040a8 B __bss_start
+00000000000042f8 b completed.7447
                  U __cxa_atexit@@GLIBC_2.2.5
                  w __cxa_finalize@@GLIBC_2.2.5
-0000000000004048 D __data_start
-0000000000004048 W data_start
-00000000000010d0 t deregister_tm_clones
-0000000000001140 t __do_global_dtors_aux
-0000000000003dd0 d __do_global_dtors_aux_fini_array_entry
-0000000000004050 D __dso_handle
-0000000000003dd8 d _DYNAMIC
-0000000000004058 D _edata
-00000000000042c0 B _end
-0000000000001414 T _fini
-0000000000001180 t frame_dummy
-0000000000003dc0 d __frame_dummy_init_array_entry
-0000000000002254 r __FRAME_END__
+0000000000004090 D __data_start
+0000000000004090 W data_start
+0000000000001160 t deregister_tm_clones
+00000000000011d0 t __do_global_dtors_aux
+0000000000003dc0 d __do_global_dtors_aux_fini_array_entry
+0000000000004098 D __dso_handle
+00000000000040a0 V DW.ref.__gxx_personality_v0
+0000000000003dc8 d _DYNAMIC
+00000000000040a8 D _edata
+0000000000004300 B _end
+00000000000017c4 T _fini
+0000000000001210 t frame_dummy
+0000000000003db0 d __frame_dummy_init_array_entry
+0000000000002344 r __FRAME_END__
 0000000000004000 d _GLOBAL_OFFSET_TABLE_
-000000000000139b t _GLOBAL__sub_I_main
+0000000000001684 t _GLOBAL__sub_I__Z7decSortxx
                  w __gmon_start__
-00000000000020b0 r __GNU_EH_FRAME_HDR
+00000000000020b8 r __GNU_EH_FRAME_HDR
+                 U __gxx_personality_v0@@CXXABI_1.3
 0000000000001000 t _init
-0000000000003dd0 d __init_array_end
-0000000000003dc0 d __init_array_start
+0000000000003dc0 d __init_array_end
+0000000000003db0 d __init_array_start
 0000000000002000 R _IO_stdin_used
                  w _ITM_deregisterTMCloneTable
                  w _ITM_registerTMCloneTable
-0000000000001410 T __libc_csu_fini
-00000000000013b0 T __libc_csu_init
+00000000000017c0 T __libc_csu_fini
+0000000000001760 T __libc_csu_init
                  U __libc_start_main@@GLIBC_2.2.5
-0000000000001185 T main
-0000000000001100 t register_tm_clones
-00000000000010a0 T _start
-0000000000004058 D __TMC_END__
-0000000000001352 t _Z41__static_initialization_and_destruction_0ii
+0000000000001306 T main
+                 U memcmp@@GLIBC_2.2.5
+0000000000001190 t register_tm_clones
+0000000000001130 T _start
+00000000000040a8 D __TMC_END__
+                 U _Unwind_Resume@@GCC_3.0
+000000000000122e T _Z12max_of_arrayPxx
+000000000000129a T _Z12min_of_arrayPxx
+000000000000163b t _Z41__static_initialization_and_destruction_0ii
+0000000000001215 T _Z7decSortxx
 000000000000200c r _ZN9__gnu_cxxL21__default_lock_policyE
+                 U _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4dataEv@@GLIBCXX_3.4.21
+                 U _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv@@GLIBCXX_3.4.21
                  U _ZNSirsERi@@GLIBCXX_3.4
-                 U _ZNSolsEi@@GLIBCXX_3.4
                  U _ZNSolsEPFRSoS_E@@GLIBCXX_3.4
+0000000000001699 W _ZNSt11char_traitsIcE7compareEPKcS2_m
 0000000000002024 r _ZNSt15regex_constantsL10ECMAScriptE
 0000000000002068 r _ZNSt15regex_constantsL10format_sedE
 000000000000208c r _ZNSt15regex_constantsL11error_braceE
@@ -74,17 +83,24 @@
 000000000000202c r _ZNSt15regex_constantsL8extendedE
 000000000000201c r _ZNSt15regex_constantsL8optimizeE
 0000000000002054 r _ZNSt15regex_constantsL9match_anyE
+                 U _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev@@GLIBCXX_3.4.21
+                 U _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@@GLIBCXX_3.4.21
+                 U _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm@@GLIBCXX_3.4.21
 00000000000020a8 r _ZNSt8__detailL19_S_invalid_state_idE
+                 U _ZNSt8ios_base15sync_with_stdioEb@@GLIBCXX_3.4
                  U _ZNSt8ios_base4InitC1Ev@@GLIBCXX_3.4
                  U _ZNSt8ios_base4InitD1Ev@@GLIBCXX_3.4
-00000000000041a0 B _ZSt3cin@@GLIBCXX_3.4
-0000000000004080 B _ZSt4cout@@GLIBCXX_3.4
+                 U _ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo@@GLIBCXX_3.4
+00000000000041e0 B _ZSt3cin@@GLIBCXX_3.4
+00000000000040c0 B _ZSt4cout@@GLIBCXX_3.4
                  U _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4
+00000000000016d5 W _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_
 0000000000002012 r _ZStL10adopt_lock
 0000000000002010 r _ZStL10defer_lock
 0000000000002011 r _ZStL11try_to_lock
 0000000000002009 r _ZStL13allocator_arg
 0000000000002008 r _ZStL19piecewise_construct
 000000000000200a r _ZStL6ignore
-00000000000042b9 b _ZStL8__ioinit
-                 U _ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_RS3_@@GLIBCXX_3.4
+00000000000042f9 b _ZStL8__ioinit
+                 U _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@@GLIBCXX_3.4
+                 U _ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE@@GLIBCXX_3.4.21

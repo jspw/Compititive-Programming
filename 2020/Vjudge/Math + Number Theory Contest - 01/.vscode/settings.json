@@ -4,8 +4,7 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "chrono": "cpp",
-        "*.tcc": "cpp",
-        "cmath": "cpp"
+        "*.tcc": "cpp"
     },
     "editor.wordWrap": "on",
     "MicroPython.executeButton": [

@@ -1,19 +1,18 @@
-Command terminated by signal 11
-	Command being timed: "./test.out"
-	User time (seconds): 0.03
-	System time (seconds): 0.00
-	Percent of CPU this job got: 100%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.04
+	Command being timed: "./C - Perfect Number.out"
+	User time (seconds): 0.19
+	System time (seconds): 0.07
+	Percent of CPU this job got: 51%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.51
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 8752
+	Maximum resident set size (kbytes): 3476
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 546
-	Voluntary context switches: 11
-	Involuntary context switches: 2
+	Minor (reclaiming a frame) page faults: 168
+	Voluntary context switches: 20034
+	Involuntary context switches: 109
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 0

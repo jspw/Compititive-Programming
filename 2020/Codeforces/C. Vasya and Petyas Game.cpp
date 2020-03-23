@@ -69,7 +69,28 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    
+
+    int n;
+    cin>>n;
+    // cout<<" a ";
+
+    vector<bool>v;
+
+    for(int i=1;i<=n;i++)v.push_back(false);
+
+    // cout<<" a ";
+
+    for(int i=2;i<=n;i++){
+        for(int j=2;j*j<=i;j++){
+            if(i%j==0){
+                v[j]=true;
+                v[i/j]=true;
+            }
+        }
+    }
+
+    for(int i=2;i<=n;i++)cout<<i<<" "<<v[i]<<endl;
+    cout<<endl;
 
 
 

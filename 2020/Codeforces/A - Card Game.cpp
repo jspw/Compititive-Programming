@@ -1,16 +1,18 @@
 /*
-
+ 
+The 300th problem in codeforces !
+ 
 Author : 5hifaT
-
+ 
 github:https://github.com/jspw
-
+ 
 linkedin : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
-
+ 
 Stackoverflow : https://stackoverflow.com/story/jspw 
-
-
+ 
+ 
 */
-
+ 
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -20,17 +22,17 @@ Stackoverflow : https://stackoverflow.com/story/jspw
 #include <set>
 #include <map>
 #include <iterator>
-
+ 
 using namespace std;
 #define ll long long
 #define ull unsigned long long
-
+ 
 //Sort array in discending order (n to 1)
 bool decSort(ll a, ll b)
 {
     return a > b;
 }
-
+ 
 //find the maximum element of a array
 ll max_of_array(ll a[], ll n)
 {
@@ -42,7 +44,7 @@ ll max_of_array(ll a[], ll n)
     }
     return mx;
 }
-
+ 
 //find the minimum element of a array
 ll min_of_array(ll a[], ll n)
 {
@@ -54,7 +56,7 @@ ll min_of_array(ll a[], ll n)
     }
     return mn;
 }
-
+ 
 bool isPrime(ll n)
 {
     if (n == 1)
@@ -68,32 +70,36 @@ bool isPrime(ll n)
     }
     return true;
 }
-
+ 
 int main()
 {
-
+ 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
-    string str;
-    cin >> str;
-
-    int ans;
-
-    if (str[0] == 'a' || str[0] == 'h')
+ 
+    int t, n, k1, k2, a, b, amax, bmax;
+    //vector<int> arr,brr;
+    cin >> t;
+    while (t--)
     {
-        if (str[1] == '8' || str[1] == '1')
+        amax = 0;
+        bmax = 0;
+        cin >> n >> k1 >> k2;
+        for (int i = 0; i < k1; i++)
         {
-            ans = 3;
+            cin >> a;
+            if (amax < a)
+                amax = a;
         }
+        for (int i = 0; i < k2; i++)
+        {
+            cin >> b;
+            if (bmax < b)
+                bmax = b;
+        }
+        if (amax > bmax)
+            cout << "YES" << endl;
         else
-            ans = 5;
+            cout << "NO" << endl;
     }
-    else if (str[1] == '1' || str[1] == '8') ans =5;
-    else ans=8;
-
-
-        cout << ans << endl;
-
-    return 0;
 }

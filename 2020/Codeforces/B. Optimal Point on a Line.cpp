@@ -75,25 +75,20 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string str;
-    cin >> str;
+    int n;
+    cin >> n;
 
-    int ans;
+    int a[n + 1];
 
-    if (str[0] == 'a' || str[0] == 'h')
-    {
-        if (str[1] == '8' || str[1] == '1')
-        {
-            ans = 3;
-        }
-        else
-            ans = 5;
-    }
-    else if (str[1] == '1' || str[1] == '8') ans =5;
-    else ans=8;
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
 
+    sort(a, a + n);
 
-        cout << ans << endl;
+    if (n % 2 != 0)
+        cout << a[(n / 2)];
+    else
+        cout << a[(n / 2) - 1];
 
     return 0;
 }

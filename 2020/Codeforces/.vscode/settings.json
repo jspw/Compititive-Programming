@@ -5,7 +5,11 @@
         "ostream": "cpp",
         "chrono": "cpp",
         "*.tcc": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "iomanip": "cpp",
+        "random": "cpp",
+        "sstream": "cpp",
+        "regex": "cpp"
     },
     "editor.wordWrap": "on",
     "MicroPython.executeButton": [

@@ -1,45 +1,42 @@
-0000000000004058 B __bss_start
+0000000000004050 B __bss_start
 00000000000042b8 b completed.7447
                  U __cxa_atexit@@GLIBC_2.2.5
                  w __cxa_finalize@@GLIBC_2.2.5
-0000000000004048 D __data_start
-0000000000004048 W data_start
-00000000000010d0 t deregister_tm_clones
-0000000000001140 t __do_global_dtors_aux
+0000000000004040 D __data_start
+0000000000004040 W data_start
+00000000000010c0 t deregister_tm_clones
+0000000000001130 t __do_global_dtors_aux
 0000000000003dd0 d __do_global_dtors_aux_fini_array_entry
-0000000000004050 D __dso_handle
+0000000000004048 D __dso_handle
 0000000000003dd8 d _DYNAMIC
-0000000000004058 D _edata
-0000000005f623c8 B _end
-0000000000001434 T _fini
-0000000000001180 t frame_dummy
+0000000000004050 D _edata
+00000000000042c0 B _end
+00000000000013d4 T _fini
+0000000000001170 t frame_dummy
 0000000000003dc0 d __frame_dummy_init_array_entry
-0000000000002294 r __FRAME_END__
+0000000000002254 r __FRAME_END__
 0000000000004000 d _GLOBAL_OFFSET_TABLE_
-00000000000013b5 t _GLOBAL__sub_I_markted
+0000000000001358 t _GLOBAL__sub_I_main
                  w __gmon_start__
-00000000000020b4 r __GNU_EH_FRAME_HDR
+00000000000020b0 r __GNU_EH_FRAME_HDR
 0000000000001000 t _init
 0000000000003dd0 d __init_array_end
 0000000000003dc0 d __init_array_start
 0000000000002000 R _IO_stdin_used
                  w _ITM_deregisterTMCloneTable
                  w _ITM_registerTMCloneTable
-0000000000001430 T __libc_csu_fini
-00000000000013d0 T __libc_csu_init
+00000000000013d0 T __libc_csu_fini
+0000000000001370 T __libc_csu_init
                  U __libc_start_main@@GLIBC_2.2.5
-00000000000012ab T main
-00000000000042c0 B markted
-0000000000001100 t register_tm_clones
-00000000000010a0 T _start
-0000000000004058 D __TMC_END__
-0000000000001237 T _Z18seive_eratosthensex
-000000000000136c t _Z41__static_initialization_and_destruction_0ii
-0000000000001185 T _Z7isPrimex
+0000000000001175 T main
+00000000000010f0 t register_tm_clones
+0000000000001090 T _start
+0000000000004050 D __TMC_END__
+000000000000130f t _Z41__static_initialization_and_destruction_0ii
 000000000000200c r _ZN9__gnu_cxxL21__default_lock_policyE
-                 U _ZNSirsERx@@GLIBCXX_3.4
+                 U _ZNSirsERi@@GLIBCXX_3.4
+                 U _ZNSolsEi@@GLIBCXX_3.4
                  U _ZNSolsEPFRSoS_E@@GLIBCXX_3.4
-                 U _ZNSolsEx@@GLIBCXX_3.4
 0000000000002024 r _ZNSt15regex_constantsL10ECMAScriptE
 0000000000002068 r _ZNSt15regex_constantsL10format_sedE
 000000000000208c r _ZNSt15regex_constantsL11error_braceE
@@ -89,5 +86,4 @@
 0000000000002009 r _ZStL13allocator_arg
 0000000000002008 r _ZStL19piecewise_construct
 000000000000200a r _ZStL6ignore
-0000000005f623c0 b _ZStL8__ioinit
-                 U _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@@GLIBCXX_3.4
+00000000000042b9 b _ZStL8__ioinit

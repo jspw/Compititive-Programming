@@ -69,31 +69,45 @@ bool isPrime(ll n)
     return true;
 }
 
+int frequency(int a[], int n, int x)
+{
+    int count = 0;
+    for (int i = 0; i < n; i++)
+        if (a[i] == x)
+            count++;
+    return count;
+}
+
 int main()
 {
 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string str;
-    cin >> str;
-
-    int ans;
-
-    if (str[0] == 'a' || str[0] == 'h')
+    int t;
+    cin >> t;
+    while (t--)
     {
-        if (str[1] == '8' || str[1] == '1')
+        int n;
+        cin >> n;
+        int a[n + 1];
+        for (int i = 0; i < n; i++)
         {
-            ans = 3;
+            cin >> a[i];
         }
-        else
-            ans = 5;
+
+        sort(a,a+n);
+        int count = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            cout<<a[i]<<" : "<<frequency(a,n,a[i])<<endl;
+            if (frequency(a, n, a[i]) >= 2)
+                count++;
+        }
+
+        // cout << count << endl;
     }
-    else if (str[1] == '1' || str[1] == '8') ans =5;
-    else ans=8;
-
-
-        cout << ans << endl;
 
     return 0;
 }

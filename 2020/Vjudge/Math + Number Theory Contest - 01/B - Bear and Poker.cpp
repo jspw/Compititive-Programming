@@ -69,31 +69,83 @@ bool isPrime(ll n)
     return true;
 }
 
+ll gcd(ll a, ll b)
+{
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
+
+ll lcm(ll a, ll b)
+{
+    return (a * b) / gcd(a, b);
+}
+
+bool two_or_three(int n)
+{
+
+    if (n % 2 == 0)
+    {
+        while (n % 2 == 0)
+        {
+            n /= 2;
+            // cout << n << " n ";
+        }
+    }
+    else if (n % 3 == 0)
+    {
+        while (n % 3 == 0)
+        {
+            n /= 3;
+            // cout << n << " n ";
+        }
+    }
+
+    // cout << endl;
+
+    if (n == 1)
+        return true;
+    else
+        return false;
+}
+
+bool isEqual(int a[], int n, ll lcmx)
+{
+    for (int i = 0; i < n; i++)
+    {
+        ll x;
+        if (a[i] == 0)
+            x = lcmx;
+        else
+            x = lcmx / a[i];
+        // cout << x << " x times ";
+        if (!two_or_three(x))
+            return false;
+    }
+
+    // cout << endl;
+    return true;
+}
+
 int main()
 {
 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string str;
-    cin >> str;
-
-    int ans;
-
-    if (str[0] == 'a' || str[0] == 'h')
+    int n, p, o = 1;
+    cin >> n;
+    n = 0;
+    while (cin >> p)
     {
-        if (str[1] == '8' || str[1] == '1')
-        {
-            ans = 3;
-        }
-        else
-            ans = 5;
+        while (p % 2 == 0)
+            p /= 2;
+        while (p % 3 == 0)
+            p /= 3;
+        n != 0 &&p != n ? o = 0 : o;
+        n = p;
     }
-    else if (str[1] == '1' || str[1] == '8') ans =5;
-    else ans=8;
-
-
-        cout << ans << endl;
+    cout << (o > 0 ? "YES" : "NO");
 
     return 0;
 }

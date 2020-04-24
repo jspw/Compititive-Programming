@@ -43,7 +43,7 @@
           "disassemble.txt",
           "&&",
           "rm",
-          "*out"
+          "*out",
         ],
         "group": {
           "kind": "build",

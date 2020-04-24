@@ -87,26 +87,16 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    string str = "ROYGVIB";
+    int n;
+    cin >> n;
+
+    for (int i = 7; i < n; i++)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
-        {
-            for (int i = 0; i < n; i++)
-            {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
-            }
-            cout << endl;
-        }
+        str = str + str[i - 4];
     }
+
+    cout << str;
 
     return 0;
 }

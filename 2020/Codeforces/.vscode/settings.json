@@ -9,7 +9,8 @@
         "iomanip": "cpp",
         "random": "cpp",
         "sstream": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "complex": "cpp"
     },
     "editor.wordWrap": "on",
     "MicroPython.executeButton": [

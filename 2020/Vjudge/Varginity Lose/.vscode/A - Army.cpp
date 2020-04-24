@@ -14,6 +14,7 @@ Dev community : https://dev.to/mhshifat
 
 */
 
+
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -24,50 +25,43 @@ Dev community : https://dev.to/mhshifat
 #include <map>
 #include <iterator>
 
+
 using namespace std;
 #define ll long long
 #define ull unsigned long long
 
+
 //Sort array in discending order (n to 1)
-bool decSort(ll a, ll b)
-{
-    return a > b;
+bool decSort(ll a,ll b){
+    return a>b;
 }
 
+
 //find the maximum element of a array
-ll max_of_array(ll a[], ll n)
-{
-    ll mx = a[0];
-    for (ll i = 0; i < n; i++)
-    {
-        if (a[i] > mx)
-            mx = a[i];
+ll max_of_array(ll a[],ll n){
+    ll mx=a[0];
+    for(ll i=0;i<n;i++){
+        if(a[i]>mx) mx = a[i];
     }
     return mx;
 }
 
+
 //find the minimum element of a array
-ll min_of_array(ll a[], ll n)
-{
-    ll mn = a[0];
-    for (ll i = 0; i < n; i++)
-    {
-        if (a[i] < mn)
-            mn = a[i];
+ll min_of_array(ll a[],ll n){
+    ll mn=a[0];
+    for(ll i=0;i<n;i++){
+        if(a[i]<mn) mn = a[i];
     }
     return mn;
 }
 
-bool isPrime(ll n)
-{
-    if (n == 1)
-        return false;
-    if (n == 2)
-        return true;
-    for (ll i = 2; i * i <= n; i++)
-    {
-        if (n % i == 0)
-            return false;
+
+bool isPrime(ll n){
+    if(n==1) return false;
+    if(n==2) return true;
+    for(ll i=2;i*i<=n;i++){
+        if(n%i==0)return false;
     }
     return true;
 }
@@ -84,14 +78,26 @@ ll lcm(ll a, ll b)
     return (a * b) / gcd(a, b);
 }
 
-int i, n, s, x, y, a[101], h[101];
-main()
-{
-    for (scanf("%d", &n); n--; h[x]++, a[y]++)
-        scanf("%d%d", &x, &y);
-    for (; i++ < 100;)
-        s += h[i] * a[i];
-    printf("%d", s);
+
+
+int main(){
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;
+    cin>>n;
+    int a[n+1];
+    for(int i=1;i<n;i++)cin>>a[i];
+    // for(int i=1;i<n;i++)cout<<a[i]<< " ";
+    // cout<<endl;
+    int x,y;
+    cin>>x>>y;
+    int sum=0;
+    for(int i=x;i<y;i++)sum+=a[i];
+    cout<<sum<<endl;
+
 
     return 0;
 }
+

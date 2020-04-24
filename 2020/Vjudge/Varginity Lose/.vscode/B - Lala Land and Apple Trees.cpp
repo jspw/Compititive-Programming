@@ -84,14 +84,69 @@ ll lcm(ll a, ll b)
     return (a * b) / gcd(a, b);
 }
 
-int i, n, s, x, y, a[101], h[101];
-main()
+int main()
 {
-    for (scanf("%d", &n); n--; h[x]++, a[y]++)
-        scanf("%d%d", &x, &y);
-    for (; i++ < 100;)
-        s += h[i] * a[i];
-    printf("%d", s);
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;
+    cin >> n;
+    vector<pair<int,int>>pu,pv;
+    // vector<int> u, v;
+    while (n--)
+    {
+        int x, a;
+        cin >> x >> a;
+        if (x<0)
+            pu.push_back(make_pair(x,a));
+        else
+            pv.push_back(make_pair(x,a));
+        
+    }
+
+
+    sort(pu.begin(), pu.end());
+    reverse(pu.begin(),pu.end());
+    sort(pv.begin(), pv.end());
+
+    ll ans = 0;
+
+    if (pu.empty())
+    {
+        cout << pv[0].second << endl;
+    }
+    else if (pv.empty())
+        cout << pu[0].second << endl;
+
+    else
+    {
+        // for (int i = 0; i < pu.size(); i++)
+        //     cout <<pu[i].first<<" -> " <<pu[i].second << endl;
+
+        // cout << endl;
+
+        // for (int i = 0; i < pv.size(); i++)
+        //     cout <<pv[i].first<<" -> " <<pv[i].second << endl;
+
+        // cout << endl;
+
+        for (int i = 0; i < pu.size() && i < pv.size(); i++)
+        {
+            ans += pu[i].second + pv[i].second;
+        }
+
+        if (pu.size() > pv.size())
+        {
+            ans += pu[pv.size()].second;
+        }
+        else if (pv.size() > pu.size())
+        {
+            ans += pv[pu.size()].second;
+        }
+
+        cout << ans << endl;
+    }
 
     return 0;
 }

@@ -1,4 +1,4 @@
-	Command being timed: "./C. Perform the Combo.out"
+	Command being timed: "./Between Two Sets.out"
 	User time (seconds): 0.00
 	System time (seconds): 0.00
 	Percent of CPU this job got: 100%
@@ -7,7 +7,7 @@
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 3480
+	Maximum resident set size (kbytes): 3364
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
 	Minor (reclaiming a frame) page faults: 143

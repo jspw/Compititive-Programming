@@ -87,24 +87,36 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    int n;
+    while (cin >> n)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
+        string str = "ROYGBIV";
+        vector<char> v;
+        bool check = false;
+        for (int i = 0; i < n; i++)
         {
-            for (int i = 0; i < n; i++)
+            for (int j = 0; j < str.size(); j++)
             {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
+                v.push_back(str[j]);
+                if (v.size() >= n)
+                {
+                    check = true;
+                    break;
+                }
             }
-            cout << endl;
+
+            if (check == true)
+                break;
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            if ((i+1) == n && (i+1) % 7 == 1)
+            {
+                cout<<"O";
+                i++;
+            }else
+                cout << v[i];
         }
     }
 

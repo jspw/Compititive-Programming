@@ -2,12 +2,15 @@
 
 Author : 5hifaT
 
-github:https://github.com/jspw
+Github        : https://github.com/jspw
 
-linkedin : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
+Gists         : https://gist.github.com/jspw
+
+linkedin      : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
 
 Stackoverflow : https://stackoverflow.com/story/jspw 
 
+Dev community : https://dev.to/mhshifat
 
 */
 
@@ -87,26 +90,51 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    int n;
+    cin >> n;
+    n *= 2;
+    int a[n + 1];
+    for (int i = 0; i < n; i++)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
+        cin >> a[i];
+    }
+
+    // for(int i=0;i<n;i++)cout<<a[i]<<endl;
+
+    int ans = 100000000;
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = i + 1; j < n; j++)
         {
-            for (int i = 0; i < n; i++)
+            // cout << "i : " << i << " , j: " << j << endl;
+            int sum = 0;
+            vector<int> v;
+            for (int k = 0; k < n; k++)
             {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
+                if (k != i && k != j)
+                    v.push_back(a[k]);
             }
-            cout << endl;
+
+            // for (int k = 0; k < v.size(); k++)
+            //     cout << a[k] << " ";
+            // cout << endl;
+
+            sort(v.begin(), v.end());
+
+            for (int k = 0; k < v.size(); k += 2)
+            {
+                sum += (v[k + 1] - v[k]);
+            }
+
+            // cout << sum << endl;
+
+            ans = min(ans, sum);
+            v.clear();
         }
     }
+
+    cout << ans << endl;
 
     return 0;
 }

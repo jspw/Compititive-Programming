@@ -1,0 +1,94 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile and run",
+            "type": "shell",
+            "command": "",
+            "args": [
+                "g++",
+                "-g",
+                "${relativeFile}",
+                "-o",
+                "${fileBasenameNoExtension}.out",
+                "&&",
+                "clear",
+                "&&",
+                "timeout",
+                "10",
+                "/usr/bin/time",
+                "-v",
+                "--output",
+                "sys.txt",
+                "./${fileBasenameNoExtension}.out",
+                "<",
+                "input.txt",
+                ">",
+                "output.txt",
+                "&&",
+                "nm",
+                "${fileBasenameNoExtension}.out",
+                ">",
+                "binary.txt",
+                "&&",
+                "objdump",
+                "-D",
+                "${fileBasenameNoExtension}.out",
+                "|",
+                "less",
+                ">",
+                "disassemble.txt",
+                "&&",
+                "rm",
+                "*out"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "clang++ build active file",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            }
+        }
+    ]
+}

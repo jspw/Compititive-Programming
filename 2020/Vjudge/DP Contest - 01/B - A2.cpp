@@ -87,24 +87,31 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    string str1, str2;
+    while (cin >> str1 >> str2)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
+        if (str1.size() != str2.size())
+            cout << "NO" << endl;
+
         else
         {
-            for (int i = 0; i < n; i++)
+            int p = 0;
+            for (int i = 0; i < str1.size(); i++)
             {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
+                if (str1[i] != str2[i])
+                {
+                    p++;
+                }
             }
-            cout << endl;
+
+            sort(str1.begin(),str1.end());
+            sort(str2.begin(),str2.end());
+
+            if(str1==str2){
+                if(p==2)cout<<"YES"<<endl;
+
+                else cout<<"NO"<<endl;
+            }else cout<<"NO"<<endl;
         }
     }
 

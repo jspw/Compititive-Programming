@@ -32,10 +32,10 @@ bool decSort(ll a, ll b)
 }
 
 //find the maximum element of a array
-ll max_of_array(ll a[], ll n)
+int max_of_array(int a[], int n)
 {
     ll mx = a[0];
-    for (ll i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         if (a[i] > mx)
             mx = a[i];
@@ -87,25 +87,66 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    int n, m;
+    while (cin >> n >> m)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
+        int a[n + 1], b[m + 1];
+        for (int i = 0; i < n; i++)
+            cin >> a[i];
+        for (int i = 0; i < m; i++)
+            cin >> b[i];
+
+        int lcmx = 1;
+
+        for (int i = 0; i < n; i++)
         {
-            for (int i = 0; i < n; i++)
-            {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
-            }
-            cout << endl;
+            lcmx = lcm(a[i], lcmx);
         }
+
+        // cout << "LCM = " << lcmx << endl;
+
+        vector<int> v;
+
+        int gcdx = b[0];
+
+        for (int i = 1; i < n; i++)
+        {
+            gcdx = gcd(b[i], gcdx);
+        }
+
+        // cout << "GCD = " << gcdx << endl;
+
+        for (int i = 1; i <= max_of_array(b, m); i++)
+        {
+            bool check = true;
+            for (int j = 0; j < m; j++)
+            {
+                if (b[j] % i != 0)
+                {
+                    check = false;
+                }
+            }
+            if (check)
+                v.push_back(i);
+        }
+
+        // for (int i = 0; i < v.size(); i++)
+        //     cout << v[i] << " ";
+
+        // cout << endl;
+
+        if (!v.empty())
+        {
+            int p = 0;
+
+            for (int i = 0; i < v.size(); i++)
+            {
+                if (v[i] % lcmx == 0)
+                    p++;
+            }
+
+            cout << p << endl;
+        }else cout<<0<<endl;
     }
 
     return 0;

@@ -2,12 +2,15 @@
 
 Author : 5hifaT
 
-github:https://github.com/jspw
+Github        : https://github.com/jspw
 
-linkedin : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
+Gists         : https://gist.github.com/jspw
+
+linkedin      : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
 
 Stackoverflow : https://stackoverflow.com/story/jspw 
 
+Dev community : https://dev.to/mhshifat
 
 */
 
@@ -20,6 +23,7 @@ Stackoverflow : https://stackoverflow.com/story/jspw
 #include <set>
 #include <map>
 #include <iterator>
+#include <math.h>
 
 using namespace std;
 #define ll long long
@@ -81,31 +85,54 @@ ll lcm(ll a, ll b)
     return (a * b) / gcd(a, b);
 }
 
+bool check(ull l, ull r, ull k)
+{
+    bool ok = false;
+    ull ans = 1;
+    while (true)
+    {
+        if (ans > r)
+            break;
+        if (ans >= l && ans <= r && (ans%k==0 | ans==1))
+        {
+            cout << ans << " ";
+            ok = true;
+        }
+
+        ans = ans * k;
+        // cout<<ans<<endl;
+        if (ans > r)
+            break;
+    }
+
+    return ok;
+}
+
 int main()
 {
 
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    // cin.tie(Nall);
 
-    int t;
-    cin >> t;
-    while (t--)
+    ull l, r, k;
+    cin >> l >> r >> k;
+
+    if (r < k)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
+        if (l > 1)
             cout << -1 << endl;
+
         else
+            cout << 1 << endl;
+    }
+    else
+    {
+        if (!check(l, r, k))
         {
-            for (int i = 0; i < n; i++)
-            {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
-            }
-            cout << endl;
+            cout << -1 << endl;
         }
+        else
+            cout << endl;
     }
 
     return 0;

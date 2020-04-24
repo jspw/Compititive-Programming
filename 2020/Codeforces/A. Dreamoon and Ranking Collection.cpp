@@ -2,12 +2,15 @@
 
 Author : 5hifaT
 
-github:https://github.com/jspw
+Github        : https://github.com/jspw
 
-linkedin : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
+Gists         : https://gist.github.com/jspw
+
+linkedin      : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
 
 Stackoverflow : https://stackoverflow.com/story/jspw 
 
+Dev community : https://dev.to/mhshifat
 
 */
 
@@ -91,21 +94,26 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
+        int n, x;
+        cin >> n >> x;
+        bool a[1000]={0};
+        for (int i = 1; i <= n; i++)
         {
-            for (int i = 0; i < n; i++)
-            {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
-            }
-            cout << endl;
+            int value;
+            cin >> value;
+            a[value] = true;
         }
+        int check=1;
+        for(int i=1;x>0;i++){
+            if(a[i]==false){
+                a[i]=true;
+                x--;
+            }
+        }
+
+        while(a[check])check++;
+
+        cout<<check-1<<endl;
     }
 
     return 0;

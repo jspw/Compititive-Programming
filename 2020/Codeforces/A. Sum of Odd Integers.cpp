@@ -20,6 +20,7 @@ Stackoverflow : https://stackoverflow.com/story/jspw
 #include <set>
 #include <map>
 #include <iterator>
+#include<math.h>
 
 using namespace std;
 #define ll long long
@@ -69,18 +70,6 @@ bool isPrime(ll n)
     return true;
 }
 
-ll gcd(ll a, ll b)
-{
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
-}
-
-ll lcm(ll a, ll b)
-{
-    return (a * b) / gcd(a, b);
-}
-
 int main()
 {
 
@@ -91,21 +80,10 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
-        {
-            for (int i = 0; i < n; i++)
-            {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
-            }
-            cout << endl;
-        }
+        int n, k;
+        cin >> n >> k ;
+        if ((n + k)%2 == 0 && sqrt(n)>=k) cout << "YES" << endl;
+        else cout << "NO" << endl;
     }
 
     return 0;

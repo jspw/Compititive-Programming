@@ -2,12 +2,15 @@
 
 Author : 5hifaT
 
-github:https://github.com/jspw
+Github        : https://github.com/jspw
 
-linkedin : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
+Gists         : https://gist.github.com/jspw
+
+linkedin      : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
 
 Stackoverflow : https://stackoverflow.com/story/jspw 
 
+Dev community : https://dev.to/mhshifat
 
 */
 
@@ -80,33 +83,19 @@ ll lcm(ll a, ll b)
 {
     return (a * b) / gcd(a, b);
 }
-
+int n, m, sum = 0, t, a[15];
 int main()
 {
 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
-        {
-            for (int i = 0; i < n; i++)
-            {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
-            }
-            cout << endl;
-        }
-    }
+    cin >> n >> m;
+    for (int i = 0; i < n; i++)
+        cin >> t, a[t]++;
+    for (int i = 1; i < m; i++)
+        n -= a[i], sum += a[i] * n;
+    cout << sum;
 
     return 0;
 }

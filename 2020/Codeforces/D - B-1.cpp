@@ -2,12 +2,15 @@
 
 Author : 5hifaT
 
-github:https://github.com/jspw
+Github        : https://github.com/jspw
 
-linkedin : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
+Gists         : https://gist.github.com/jspw
+
+linkedin      : https://www.linkedin.com/in/mehedi-hasan-shifat-2b10a4172/
 
 Stackoverflow : https://stackoverflow.com/story/jspw 
 
+Dev community : https://dev.to/mhshifat
 
 */
 
@@ -87,26 +90,43 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    int n, m;
+    cin >> n >> m;
+    int a[m + 1];
+    for (int i = 1; i <= m; i++)
+        a[i] = 0;
+    for (int i = 0; i < n; i++)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
-        {
-            for (int i = 0; i < n; i++)
-            {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
-            }
-            cout << endl;
+        int x;
+        cin >> x;
+        a[x]++;
+    }
+
+    
+
+    sort(a+1, a + (m+1),decSort);
+
+    for (int i = 1; i <= m; i++)
+        cout << a[i] << " ";
+    cout << endl;
+
+    ll ans = 0;
+    
+    for(int i=1;;){
+        if(a[i]==0)i++;
+        for(int j=m;j>=i;j--){
+            
         }
     }
+
+    for (int i = 1; i <= m; i++)
+        cout << a[i] << " ";
+    cout << endl;
+
+
+    cout<<ans<<endl;
+
+    
 
     return 0;
 }

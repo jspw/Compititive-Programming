@@ -87,25 +87,32 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    int n;
+    string str;
+    while (cin >> n >> str)
     {
-        int n;
-        cin >> n;
-        if (n == 1)
-            cout << -1 << endl;
-        else
+        int x = 0, y = 0, p = 0;
+        for (int i = 0; i < n; i++)
         {
-            for (int i = 0; i < n; i++)
+            for (int j = i; j < n; j++)
             {
-                if (i == 0)
-                    cout << 2;
-                else
-                    cout << 3;
+                if (str[j] == 'R')
+                    x++;
+                if (str[j] == 'L')
+                    x--;
+                if (str[j] == 'U')
+                    y++;
+                if (str[j] == 'D')
+                    y--;
+                if (x == 0 && y == 0)
+                    p++;
             }
-            cout << endl;
+
+            x = 0;
+            y = 0;
         }
+
+        cout << p << endl;
     }
 
     return 0;

@@ -1,63 +1,56 @@
-0000000000004090 B __bss_start
-                 U ceil@@GLIBC_2.2.5
-00000000000042f8 b completed.7447
+0000000000004060 B __bss_start
+00000000000042b8 b completed.7452
                  U __cxa_atexit@@GLIBC_2.2.5
                  w __cxa_finalize@@GLIBC_2.2.5
-0000000000004080 D __data_start
-0000000000004080 W data_start
-0000000000001140 t deregister_tm_clones
-00000000000011b0 t __do_global_dtors_aux
-0000000000003dc0 d __do_global_dtors_aux_fini_array_entry
-0000000000004088 D __dso_handle
-0000000000003dc8 d _DYNAMIC
-0000000000004090 D _edata
-0000000000004300 B _end
-0000000000001604 T _fini
-                 U floor@@GLIBC_2.2.5
-00000000000011f0 t frame_dummy
-0000000000003db0 d __frame_dummy_init_array_entry
-00000000000022dc r __FRAME_END__
+0000000000004050 D __data_start
+0000000000004050 W data_start
+00000000000010e0 t deregister_tm_clones
+0000000000001150 t __do_global_dtors_aux
+0000000000003dd0 d __do_global_dtors_aux_fini_array_entry
+0000000000004058 D __dso_handle
+0000000000003dd8 d _DYNAMIC
+0000000000004060 D _edata
+00000000000042c0 B _end
+0000000000001544 T _fini
+0000000000001190 t frame_dummy
+0000000000003dc0 d __frame_dummy_init_array_entry
+00000000000022b4 r __FRAME_END__
 0000000000004000 d _GLOBAL_OFFSET_TABLE_
-0000000000001566 t _GLOBAL__sub_I__Z7decSortxx
+0000000000001498 t _GLOBAL__sub_I__Z7decSortxx
                  w __gmon_start__
-000000000000200c r __GNU_EH_FRAME_HDR
+0000000000002008 r __GNU_EH_FRAME_HDR
 0000000000001000 t _init
-0000000000003dc0 d __init_array_end
-0000000000003db0 d __init_array_start
+0000000000003dd0 d __init_array_end
+0000000000003dc0 d __init_array_start
 0000000000002000 R _IO_stdin_used
                  w _ITM_deregisterTMCloneTable
                  w _ITM_registerTMCloneTable
-0000000000001600 T __libc_csu_fini
-00000000000015a0 T __libc_csu_init
+0000000000001540 T __libc_csu_fini
+00000000000014e0 T __libc_csu_init
                  U __libc_start_main@@GLIBC_2.2.5
-                 U log2@@GLIBC_2.29
-000000000000141d T main
-0000000000001170 t register_tm_clones
-0000000000001110 T _start
-0000000000004090 D __TMC_END__
-00000000000013c2 T _Z12isPowerOfTwox
-000000000000120e T _Z12max_of_arrayPxx
-000000000000127a T _Z12min_of_arrayPxx
-0000000000001347 T _Z3gcdxx
-0000000000001380 T _Z3lcmxx
-000000000000151d t _Z41__static_initialization_and_destruction_0ii
-00000000000011f5 T _Z7decSortxx
-00000000000012e6 T _Z7isPrimex
+0000000000001362 T main
+0000000000001110 t register_tm_clones
+00000000000010b0 T _start
+0000000000004060 D __TMC_END__
+00000000000011ae T _Z12max_of_arrayPxx
+000000000000121a T _Z12min_of_arrayPxx
+00000000000012e7 T _Z3gcdxx
+0000000000001320 T _Z3lcmxx
+000000000000144f t _Z41__static_initialization_and_destruction_0ii
+0000000000001195 T _Z7decSortxx
+0000000000001286 T _Z7isPrimex
                  U _ZNSirsERi@@GLIBCXX_3.4
-                 U _ZNSirsERx@@GLIBCXX_3.4
                  U _ZNSolsEi@@GLIBCXX_3.4
                  U _ZNSolsEPFRSoS_E@@GLIBCXX_3.4
-                 U _ZNSolsEx@@GLIBCXX_3.4
                  U _ZNSt8ios_base15sync_with_stdioEb@@GLIBCXX_3.4
                  U _ZNSt8ios_base4InitC1Ev@@GLIBCXX_3.4
                  U _ZNSt8ios_base4InitD1Ev@@GLIBCXX_3.4
                  U _ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo@@GLIBCXX_3.4
-00000000000041e0 B _ZSt3cin@@GLIBCXX_3.4
-00000000000040c0 B _ZSt4cout@@GLIBCXX_3.4
+00000000000041a0 B _ZSt3cin@@GLIBCXX_3.4
+00000000000014ad W _ZSt3maxIiERKT_S2_S2_
+0000000000004080 B _ZSt4cout@@GLIBCXX_3.4
                  U _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4
-000000000000157b W _ZSt4log2IxEN9__gnu_cxx11__enable_ifIXsrSt12__is_integerIT_E7__valueEdE6__typeES3_
 0000000000002005 r _ZStL13allocator_arg
 0000000000002004 r _ZStL19piecewise_construct
 0000000000002006 r _ZStL6ignore
-00000000000042f9 b _ZStL8__ioinit
-                 U _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@@GLIBCXX_3.4
+00000000000042b9 b _ZStL8__ioinit

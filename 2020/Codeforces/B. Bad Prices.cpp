@@ -23,7 +23,6 @@ Dev community : https://dev.to/mhshifat
 #include <set>
 #include <map>
 #include <iterator>
-#include <math.h>
 
 using namespace std;
 #define ll long long
@@ -93,19 +92,23 @@ int main()
 
     int t;
     cin >> t;
-    while (t--)
+    forn(tt, t)
     {
-        ll n;
+        int n;
         cin >> n;
-        for (int i = 2;; i++)
+        vector<int> a(n);
+        forn(i, n)
+                cin >>
+            a[i];
+        int ans = 0;
+        int right_min = INT_MAX;
+        for (int i = n - 1; i >= 0; i--)
         {
-            ll x = pow(2, i) - 1;
-            if (n % x == 0)
-            {
-                cout << (n / x) << endl;
-                break;
-            }
+            if (a[i] > right_min)
+                ans++;
+            right_min = min(right_min, a[i]);
         }
+        cout << ans << endl;
     }
 
     return 0;

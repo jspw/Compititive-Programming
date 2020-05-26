@@ -23,7 +23,6 @@ Dev community : https://dev.to/mhshifat
 #include <set>
 #include <map>
 #include <iterator>
-#include <math.h>
 
 using namespace std;
 #define ll long long
@@ -91,22 +90,51 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    int n;
+    cin >> n;
+    int a[n + 1];
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    map<int, int> m;
+
+    for (int i = 0; i < n; i++)
     {
-        ll n;
-        cin >> n;
-        for (int i = 2;; i++)
+        if (i == 0)
         {
-            ll x = pow(2, i) - 1;
-            if (n % x == 0)
+            m.insert({a[i], 1});
+        }
+        else
+        {
+            if (m.count(a[i]))
             {
-                cout << (n / x) << endl;
-                break;
+
+                m[a[i]]++;
             }
+            else
+                m.insert({a[i], a[i] + 1});
         }
     }
+
+    // for (auto itr = m.begin(); itr != m.end(); ++itr) {
+    //     cout << itr->first
+    //          << '\t' << itr->second << '\n';
+    // }
+    set<int> s;
+    for (int i = 0; i < n; i++)
+    {
+        if (m.count(a[i]))
+        {
+            s.insert(m[a[i]]);
+            cout<<m[a[i]]<<" ";
+        }
+    }
+
+    // for (auto itr = s.begin(); itr != s.end(); ++itr)
+    // {
+    //     cout << *itr << " ";
+    // }
+
+    cout << endl;
 
     return 0;
 }

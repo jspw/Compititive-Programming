@@ -23,7 +23,6 @@ Dev community : https://dev.to/mhshifat
 #include <set>
 #include <map>
 #include <iterator>
-#include <math.h>
 
 using namespace std;
 #define ll long long
@@ -95,16 +94,13 @@ int main()
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
-        for (int i = 2;; i++)
+        int n, a;
+        cin >> n >> a;
+        int fact = 1;
+        for (int i = 1; i <= n; i++)
         {
-            ll x = pow(2, i) - 1;
-            if (n % x == 0)
-            {
-                cout << (n / x) << endl;
-                break;
-            }
+            fact = ((fact % a) * (i % a)) % a;
+            cout << fact << endl;
         }
     }
 

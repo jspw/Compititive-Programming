@@ -23,7 +23,6 @@ Dev community : https://dev.to/mhshifat
 #include <set>
 #include <map>
 #include <iterator>
-#include <math.h>
 
 using namespace std;
 #define ll long long
@@ -95,17 +94,49 @@ int main()
     cin >> t;
     while (t--)
     {
-        ll n;
+        int n;
         cin >> n;
-        for (int i = 2;; i++)
+        int a[n + 1][n + 1];
+        for (int i = 0; i < n; i++)
         {
-            ll x = pow(2, i) - 1;
-            if (n % x == 0)
-            {
-                cout << (n / x) << endl;
-                break;
-            }
+            for (int j = 0; j < n; j++)
+                cin >> a[i][j];
         }
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+               cout<< a[i][j]<<" ";
+            cout<<endl;
+        }
+        bool check = true;
+        for (int i = 1; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (j == n - 1)
+                {
+                    if (a[i][j] == 1 && (a[i - 1][j] == 1))
+                    {
+                        check = false;
+                        break;
+                    }
+                }
+
+                if (a[i][j] == 1 && (a[i - 1][j] == 1 | a[i][j + 1] == 1))
+                {
+                    check = false;
+                    break;
+                }
+            }
+
+            if (!check)
+                break;
+        }
+
+        if (check)
+            cout << "SAFE" << endl;
+        else
+            cout << "UNSAFE" << endl;
     }
 
     return 0;

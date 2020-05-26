@@ -23,7 +23,6 @@ Dev community : https://dev.to/mhshifat
 #include <set>
 #include <map>
 #include <iterator>
-#include <math.h>
 
 using namespace std;
 #define ll long long
@@ -95,17 +94,12 @@ int main()
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
-        for (int i = 2;; i++)
-        {
-            ll x = pow(2, i) - 1;
-            if (n % x == 0)
-            {
-                cout << (n / x) << endl;
-                break;
-            }
-        }
+        ll m, n;
+        cin >> m >> n;
+        if (n == 1 || m == 1 || (n == 2 && m == 2))
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
 
     return 0;

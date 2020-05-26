@@ -23,7 +23,6 @@ Dev community : https://dev.to/mhshifat
 #include <set>
 #include <map>
 #include <iterator>
-#include <math.h>
 
 using namespace std;
 #define ll long long
@@ -85,28 +84,71 @@ ll lcm(ll a, ll b)
     return (a * b) / gcd(a, b);
 }
 
+ll fact(int n)
+{
+    if (n == 1 | n == 0)
+        return 1;
+    // if(n==1)return 1;
+
+    else
+        return (n * fact(n - 1));
+}
+
+ll printNcR(int n, int r)
+{
+
+    long long p = 1, k = 1;
+
+    if (n - r < r)
+        r = n - r;
+
+    if (r != 0)
+    {
+        while (r)
+        {
+            p *= n;
+            k *= r;
+            long long m = __gcd(p, k);
+            p /= m;
+            k /= m;
+
+            n--;
+            r--;
+        }
+    }
+
+    else
+        p = 1;
+    return p;
+}
+
 int main()
+
 {
 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    int n, m, t;
+    cin >> n >> m >> t;
+    int a = 1, b;
+    ll sum = 0;
+    while (1)
     {
-        ll n;
-        cin >> n;
-        for (int i = 2;; i++)
+        b = (t - a);
+        // cout << "a : " << a << " , b : " << b << endl;
+        if (a > m && b < 4)
+            break;
+        if (a <= m && b <= n && b>=4)
         {
-            ll x = pow(2, i) - 1;
-            if (n % x == 0)
-            {
-                cout << (n / x) << endl;
-                break;
-            }
+            // cout<<"Combinations "<<a<<" "<<b<<endl;
+            sum += printNcR(m, a) * printNcR(n, b);
         }
+        // cout << "sum : " << sum << endl;
+        a++;
     }
+
+    cout << sum << endl;
 
     return 0;
 }

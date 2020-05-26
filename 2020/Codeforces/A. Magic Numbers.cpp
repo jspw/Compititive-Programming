@@ -23,7 +23,6 @@ Dev community : https://dev.to/mhshifat
 #include <set>
 #include <map>
 #include <iterator>
-#include <math.h>
 
 using namespace std;
 #define ll long long
@@ -91,22 +90,47 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--)
+    string str;
+    cin >> str;
+    bool check = true;
+    for (int i = str.size() - 1; i >= 0; i--)
     {
-        ll n;
-        cin >> n;
-        for (int i = 2;; i++)
+        if (str[i] == '4')
         {
-            ll x = pow(2, i) - 1;
-            if (n % x == 0)
+            // cout << str[i] << ", i =  " << i << endl;
+            
+            if (str[i - 1] == '4')
             {
-                cout << (n / x) << endl;
+                if (str[i - 2] != '1')
+                {
+                    check = false;
+                    break;
+                }
+                else
+                    i -= 2;
+            }
+            else if (str[i - 1] == '1')
+            {
+                i--;
+            }
+            else
+            {
+                check = false;
                 break;
             }
+            // cout<<check<<", i =  "<<i<<endl;
+        }
+        else if (str[i] != '1')
+        {
+            check = false;
+            break;
         }
     }
+
+    if (check)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
 
     return 0;
 }

@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.txt": "plaintext",
+			"iostream": "cpp",
+			"ostream": "cpp",
+			"chrono": "cpp",
+			"*.tcc": "cpp",
+			"cmath": "cpp",
+			"iomanip": "cpp",
+			"random": "cpp",
+			"sstream": "cpp",
+			"regex": "cpp",
+			"complex": "cpp"
+		}
+	}
+}
